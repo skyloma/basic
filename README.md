@@ -1,14 +1,14 @@
 # basic
 
-> 一个使用Gradle搭建的SpringBoot + Vue的开发框架
+> Gradle搭建的 SpringBoot + Vue 前后端分离且合并打包的基本框架
 
 ## 子项目说明
 
 ```
-tool    后端工具项目
-common  后端通用项目
-server  后端Api接口项目
-web     前端Vue项目
+tool    后端工具子项目
+common  后端通用子项目
+server  后端Api接口子项目
+web     前端Vue子项目
 ```
 
 ## 搭建时环境
