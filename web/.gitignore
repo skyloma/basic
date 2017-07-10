@@ -1,0 +1,7 @@
+.DS_Store
+.idea
+.gradle
+.iml
+build
+node_modules/
+npm-debug.log

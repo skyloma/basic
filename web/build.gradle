@@ -1,14 +1,26 @@
-group 'ml.stephen'
-version '1.0.0'
-
-apply plugin: 'java'
-
-sourceCompatibility = 1.8
-
-repositories {
-    mavenCentral()
+plugins {
+    id 'com.moowork.node' version '1.2.0'
+    id 'java'
 }
 
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
+node {
+  version = '6.11.0'
+  download = true
 }
+
+task npmDev(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'dev']
+}
+
+task npmStart(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'start']
+}
+
+task npmBuild(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'build']
+}
+
+jar.dependsOn npmBuild

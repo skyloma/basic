@@ -1,4 +1,4 @@
-rootProject.name = 'base'
+rootProject.name = 'basic'
 include 'tool'
 include 'common'
 include 'server'
