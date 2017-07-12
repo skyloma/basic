@@ -1,23 +1,27 @@
 <template>
-	<div class="hello">
+	<div class="index">
 		<h1>{{ msg }}</h1>
 	</div>
 </template>
 
 <script>
 	export default {
-		name: 'hello',
+	    name: 'index',
 		data () {
 			return {
-				msg: ''
+				msg: 'Welcome to Your Vue.js App'
 			}
 		},
 		created() {
-			this.$http.get('/api/hello/sayHello').then(function(data){
-				this.msg = data.body.message;
+	        var _this = this;
+
+			_this.$http.get('/api/hello').then(function(data){
+				_this.$Notice.info({
+					title: data.body.message
+				});
 			}, function(response){
-				console.info(response);
-			})
+				console.error(response);
+			});
 		}
 	}
 </script>

@@ -9,6 +9,7 @@ tool    后端工具子项目
 common  后端通用子项目
 server  后端Api接口子项目
 web     前端Vue子项目
+webapp  移动端子项目
 ```
 
 ## 搭建时环境
