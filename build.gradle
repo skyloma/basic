@@ -1,3 +1,8 @@
-group 'ml.stephen'
-version '1.0.0'
+allprojects {
+    group 'ml.stephen'
+    version '1.0.0'
 
+    repositories {
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
+    }
+}

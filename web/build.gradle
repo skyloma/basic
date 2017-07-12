@@ -3,6 +3,11 @@ plugins {
     id 'java'
 }
 
+jar {
+	baseName = 'WEB'
+	version =  '1.0.0'
+}
+
 node {
   version = '6.11.0'
   download = true

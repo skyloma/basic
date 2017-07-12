@@ -2,10 +2,6 @@ plugins {
     id 'java'
 }
 
-repositories {
-    maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
-}
-
 dependencies {
 
 }
