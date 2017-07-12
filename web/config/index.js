@@ -30,8 +30,8 @@ module.exports = {
 		assetsSubDirectory: 'assets',
 		assetsPublicPath: '/',
 		proxyTable: {
-			// 代理前台/api开头的请求, 代理到8000端口, SpringBoot的访问端口
-			'/api/**': 'http://localhost:8000'
+			// 代理前台/api开头的请求, 代理到8080端口, SpringBoot的访问端口
+			'/api/**': 'http://localhost:8080'
 		},
 		// CSS Sourcemaps off by default because relative paths are "buggy"
 		// with this option, according to the CSS-Loader README

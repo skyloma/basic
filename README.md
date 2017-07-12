@@ -27,8 +27,8 @@ Vue-CLI: 2.8.2
 ```
 一、先运行server子项目的, 启动SpringBoot.
 二、再运行web子项目的npmDev任务, 启动node的开发服务器.
-三、当web子项目有请求需要调用SpringBoot后台, 加上/api前缀去请求即可代理从node的开发服务器http://localhost:3000/api/xxxx代理到http://localhost:8000/api/xxxx.
-四、而在开发前台页面时候（对web/src目录下的文件修改）, 应该访问http://localhost:3000, 而不是8000端口, 访问3000端口, 即可看到页面修改的即时效果.
+三、当web子项目有请求需要调用SpringBoot后台, 加上/api前缀去请求即可代理从node的开发服务器http://localhost:3000/api/xxxx代理到http://localhost:8080/api/xxxx.
+四、而在开发前台页面时候（对web/src目录下的文件修改）, 应该访问http://localhost:3000, 而不是8080端口, 访问3000端口, 即可看到页面修改的即时效果.
 
 ```
 
