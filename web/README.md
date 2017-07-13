@@ -13,6 +13,18 @@
 
 # 编译打包
 运行npmBuild任务
+
+# 单元测试
+运行npmUnit任务
+
+# E2E测试
+运行npmE2E任务
+
+# 执行所有测试
+运行npmTest任务
+
+# 代码审查
+运行npmLint任务
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

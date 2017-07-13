@@ -6,22 +6,22 @@
 
 <script>
 	export default {
-	    name: 'index',
+		name: 'index',
 		data () {
 			return {
 				msg: 'Welcome to Your Vue.js App'
 			}
 		},
-		created() {
-	        var _this = this;
+		created () {
+			var _this = this
 
-			_this.$http.get('/api/hello').then(function(data){
+			_this.$http.get('/api/hello').then(function (data) {
 				_this.$Notice.info({
 					title: data.body.message
-				});
-			}, function(response){
-				console.error(response);
-			});
+				})
+			}, function (response) {
+				console.error(response)
+			})
 		}
 	}
 </script>

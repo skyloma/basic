@@ -29,3 +29,23 @@ task npmBuild(type: NpmTask, dependsOn: npmInstall) {
 }
 
 jar.dependsOn npmBuild
+
+task npmUnit(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'unit']
+}
+
+task npmE2E(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'e2e']
+}
+
+task npmTest(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'test']
+}
+
+task npmLint(type: NpmTask, dependsOn: npmInstall) {
+	group = 'node'
+	args = ['run', 'lint']
+}
