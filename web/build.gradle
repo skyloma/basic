@@ -13,39 +13,39 @@ node {
   download = true
 }
 
-task npmDev(type: NpmTask, dependsOn: npmInstall) {
+task npmDev(type: NpmTask, dependsOn: npmInstall, description: '开发调试任务') {
 	group = 'node'
 	args = ['run', 'dev']
 }
 
-task npmStart(type: NpmTask, dependsOn: npmInstall) {
+task npmStart(type: NpmTask, dependsOn: npmInstall, description: '开发调试任务') {
 	group = 'node'
 	args = ['run', 'start']
 }
 
-task npmBuild(type: NpmTask, dependsOn: npmInstall) {
+task npmBuild(type: NpmTask, dependsOn: npmInstall, description: '编译打包任务') {
 	group = 'node'
 	args = ['run', 'build']
 }
 
 jar.dependsOn npmBuild
 
-task npmUnit(type: NpmTask, dependsOn: npmInstall) {
+task npmUnit(type: NpmTask, dependsOn: npmInstall, description: '单元测试任务') {
 	group = 'node'
 	args = ['run', 'unit']
 }
 
-task npmE2E(type: NpmTask, dependsOn: npmInstall) {
+task npmE2E(type: NpmTask, dependsOn: npmInstall, description: 'E2E测试任务') {
 	group = 'node'
 	args = ['run', 'e2e']
 }
 
-task npmTest(type: NpmTask, dependsOn: npmInstall) {
+task npmTest(type: NpmTask, dependsOn: npmInstall, description: '执行所有测试任务') {
 	group = 'node'
 	args = ['run', 'test']
 }
 
-task npmLint(type: NpmTask, dependsOn: npmInstall) {
+task npmLint(type: NpmTask, dependsOn: npmInstall, description: '代码审查任务') {
 	group = 'node'
 	args = ['run', 'lint']
 }

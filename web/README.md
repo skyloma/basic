@@ -8,7 +8,7 @@
 # 安装依赖
 运行npmInstall任务
 
-# 开发启动 调试地址: http://localhost:3000 Api地址: http://localhost:8000
+# 开发调试 调试地址: http://localhost:3000 Api地址: http://localhost:8000
 运行npmDev/npmStart任务
 
 # 编译打包
