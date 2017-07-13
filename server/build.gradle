@@ -10,7 +10,8 @@ jar {
 
 dependencies {
     compile project(':web')
-
+    compile project(':webapp')
+    
     compile (
             'org.springframework.boot:spring-boot-starter-web',
             'org.springframework.boot:spring-boot-devtools'

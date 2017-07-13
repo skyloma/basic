@@ -1,8 +1,46 @@
 plugins {
-    id 'java'
+	id 'com.moowork.node' version '1.2.0'
+	id 'java'
 }
 
 jar {
     baseName = 'WEBAPP'
     version =  '1.0.0'
+}
+
+node {
+	version = '6.11.0'
+	download = true
+}
+
+task npmDev(type: NpmTask, dependsOn: npmInstall, description: '开发调试任务') {
+	group = 'node'
+	args = ['run', 'dev']
+}
+
+task npmBuild(type: NpmTask, dependsOn: npmInstall, description: '编译打包任务') {
+	group = 'node'
+	args = ['run', 'build']
+}
+
+jar.dependsOn npmBuild
+
+task npmUnit(type: NpmTask, dependsOn: npmInstall, description: '单元测试任务') {
+	group = 'node'
+	args = ['run', 'unit']
+}
+
+task npmE2E(type: NpmTask, dependsOn: npmInstall, description: 'E2E测试任务') {
+	group = 'node'
+	args = ['run', 'e2e']
+}
+
+task npmTest(type: NpmTask, dependsOn: npmInstall, description: '执行所有测试任务') {
+	group = 'node'
+	args = ['run', 'test']
+}
+
+task npmLint(type: NpmTask, dependsOn: npmInstall, description: '代码审查任务') {
+	group = 'node'
+	args = ['run', 'lint']
 }

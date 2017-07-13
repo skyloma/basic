@@ -1,6 +1,6 @@
-# web
+# webapp
 
-> WEB端Vue
+> 移动端Vue
 
 ## 启动命令
 
@@ -8,8 +8,8 @@
 # 安装依赖
 运行npmInstall任务
 
-# 开发调试 调试地址: http://localhost:3000 Api地址: http://localhost:8080
-运行npmDev/npmStart任务
+# 开发调试 调试地址: http://localhost:8000 Api地址: http://localhost:8080
+运行npmDev任务
 
 # 编译打包
 运行npmBuild任务

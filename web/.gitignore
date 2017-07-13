@@ -3,7 +3,7 @@
 .gradle
 .iml
 build
-node_modules/
+node_modules
 npm-debug.log
 test/unit/coverage
 test/e2e/reports

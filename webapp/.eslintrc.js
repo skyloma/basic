@@ -17,7 +17,7 @@ module.exports = {
 	],
 	// add your custom rules here
 	'rules': {
-	    'no-tabs': 0,
+		'no-tabs': 0,
 		'indent': [1, 'tab'],
 		// allow paren-less arrow functions
 		'arrow-parens': 0,
